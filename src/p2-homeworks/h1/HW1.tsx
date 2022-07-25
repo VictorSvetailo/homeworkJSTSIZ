@@ -1,18 +1,18 @@
 import React from 'react'
 import Message from "./Message";
+import {inspect} from "util";
 
 const messageData = {
-    avatar: 'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',
-    name: 'Some Name',
-    message: 'some text',
+    avatar: 'https://inlnk.ru/0QXG0E',
+    name: 'Victor Wayne',
+    message: 'Hello how are you?',
     time: '22:00',
 }
 
 function HW1() {
     return (
         <div>
-            <hr/>
-            homeworks 1
+            <h1>Homeworks 1</h1>
             {/*should work (должно работать)*/}
             <Message
                 avatar={messageData.avatar}
@@ -20,7 +20,6 @@ function HW1() {
                 message={messageData.message}
                 time={messageData.time}
             />
-
             <hr/>
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeMessage/>*/}

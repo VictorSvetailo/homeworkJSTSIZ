@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './Message.module.css'
 
 
 export type messageDataType = {
@@ -9,15 +10,20 @@ export type messageDataType = {
 }
 
 export function Message(props: messageDataType) {
-    debugger
     return (
-        <div>
-            <img src={props.avatar} alt=""/>
-            <h2>{props.name}</h2>
-            <h3>{props.message}</h3>
-            <h4>{props.time}</h4>
+        <div className={styles.message}>
+            <div className={styles.message__image}><img src={props.avatar} alt=""/></div>
+            <div className={styles.message__block}>
+                <h2>{props.name}</h2>
+                <div className={styles.message__items}>
+                    <p>{props.message}</p>
+                    <p className={styles.message__time}>{props.time}</p>
+                </div>
+            </div>
+
         </div>
     )
 }
+
 
 export default Message
