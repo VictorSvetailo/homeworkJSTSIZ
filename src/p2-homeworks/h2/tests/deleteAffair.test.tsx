@@ -14,23 +14,23 @@ beforeEach(() => {
     ]
 })
 
-test.skip('delete 0', () => {
+test('delete 0', () => {
     const newState = deleteAffair(initialState, 0)
     expect(newState.length).toBe(6)
 })
-test.skip('delete 1', () => {
+test('delete 1', () => {
     const newState = deleteAffair(initialState, 1)
     expect(newState.length).toBe(5)
 })
-test.skip('delete 3', () => {
+test('delete 3', () => {
     const newState = deleteAffair(initialState, 3)
     expect(newState.length).toBe(5)
 })
-test.skip('delete 6', () => {
+test('delete 6', () => {
     const newState = deleteAffair(initialState, 6)
     expect(newState.length).toBe(5)
 })
-test.skip('delete 7', () => {
+test('delete 7', () => {
     const newState = deleteAffair(initialState, 7)
     expect(newState.length).toBe(6)
 })
