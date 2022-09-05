@@ -1,17 +1,19 @@
-import React from 'react'
+import Reac, {MouseEvent} from 'react'
+import {AffairType} from './HW2';
 
 type AffairPropsType = {
     // key не нужно типизировать
-    affair: any // need to fix any
-    deleteAffairCallback: any // need to fix any
+    affair: string // need to fix any
+    deleteAffairCallback: (id: string) => void // need to fix any
+    priority: string
+    id: string
 }
 
 function Affair(props: AffairPropsType) {
-    const deleteCallback = () => {}// need to fix
-
+    const deleteCallback = (e: MouseEvent<HTMLButtonElement>) => props.deleteAffairCallback(props.id) // need to fix
     return (
         <div>
-            // show some text
+            <span key={props.id} >{props.affair} <b>{props.priority}</b> </span>
 
             <button onClick={deleteCallback}>X</button>
         </div>

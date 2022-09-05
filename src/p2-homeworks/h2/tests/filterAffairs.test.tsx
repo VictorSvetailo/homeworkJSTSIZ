@@ -1,16 +1,17 @@
 import React from 'react'
 import {AffairType, filterAffairs} from '../HW2'
+import {v1} from 'uuid';
 
 let initialState: AffairType[]
 
 beforeEach(() => {
     initialState = [
-        {_id: 1, name: 'React', priority: 'high'},
-        {_id: 2, name: 'anime', priority: 'low'},
-        {_id: 3, name: 'games', priority: 'low'},
-        {_id: 4, name: 'work', priority: 'high'},
-        {_id: 5, name: 'html & css', priority: 'middle'},
-        {_id: 6, name: 'porn', priority: 'low'},
+        {id: v1(), name: 'React', priority: 'high'},
+        {id: v1(), name: 'anime', priority: 'low'},
+        {id: v1(), name: 'games', priority: 'low'},
+        {id: v1(), name: 'work', priority: 'high'},
+        {id: v1(), name: 'html & css', priority: 'middle'},
+        {id: v1(), name: 'react', priority: 'low'},
     ]
 })
 
