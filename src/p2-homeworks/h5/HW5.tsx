@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './Header'
 import {RoutesFC} from './RoutesFC';
+import {Count} from '../h5-rrd-v6/count';
 
 function HW5() {
     return (
@@ -10,7 +11,7 @@ function HW5() {
 
             <Header/>
             <RoutesFC/>
-
+            {/*<Count/>*/}
             {/*</HashRouter>*/}
         </div>
     )

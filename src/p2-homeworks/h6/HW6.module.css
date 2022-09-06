@@ -1,0 +1,7 @@
+.error {
+    border: 2px solid red
+}
+
+.error__text{
+    color: red;
+}

@@ -4,13 +4,13 @@ import {v1} from 'uuid';
 import {log} from 'util';
 
 // types
-//export type AffairPriorityType = any // need to fix any
+export type AffairPriorityType = 'high' | 'low' | 'middle' // need to fix any
 export type AffairType = {
     id: string
     name: string
-    priority: string
+    priority: AffairPriorityType
 } // need to fix any
-export type FilterType = 'all' | 'high' | 'middle' | 'low'
+export type FilterType = 'all' | AffairPriorityType
 
 // constants
 const defaultAffairs: Array<AffairType> = [ // need to fix any
@@ -23,11 +23,12 @@ const defaultAffairs: Array<AffairType> = [ // need to fix any
 ]
 
 // pure helper functions
-export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): any => { // need to fix any
+export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): Array<AffairType> => { // need to fix any
     if (filter === 'all') return affairs
     else if (filter === 'high') return affairs.filter(a => a.priority === filter)
     else if (filter === 'middle') return affairs.filter(a => a.priority === filter)
     else if (filter === 'low') return affairs.filter(a => a.priority === filter)
+    else return affairs
 }
 export const deleteAffair = (affairs: Array<AffairType>, id: string): Array<AffairType> => { // need to fix any
     return affairs.filter(a => a.id !== id)

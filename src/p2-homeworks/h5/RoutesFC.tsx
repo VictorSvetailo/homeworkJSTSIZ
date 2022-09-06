@@ -21,9 +21,9 @@ export function RoutesFC() {
             <Routes>
                     <Route path={'/'}/>
                     <Route path={PATH.PRE_JUNIOR} element={<PreJunior/>}/>
-                    {/*<Route path={PATH.JUNIOR} element={<h1> junior page находится в разработке</h1>}/>*/}
-                    {/*<Route path={PATH.JUNIOR_PLUS} element={<h1>junior + находится в разработке</h1>}/>*/}
-                    {/*<Route path={'/*'} element={<Error404/>}/>*/}
+                    <Route path={PATH.JUNIOR} element={<h1> junior page находится в разработке</h1>}/>
+                    <Route path={PATH.JUNIOR_PLUS} element={<h1>junior + находится в разработке</h1>}/>
+                    <Route path={'/*'} element={<Error404/>}/>
             </Routes>
 
             {/*Switch выбирает первый подходящий роут*/}
