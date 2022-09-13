@@ -26,7 +26,6 @@ const SuperRadio: React.FC<SuperRadioPropsType> = (
                 type={'radio'}
                 // name, checked, value, onChange
             />
-            {o}
         </label>
     )) : []
 
